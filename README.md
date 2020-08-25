@@ -6,4 +6,4 @@ user profile is shown by clicking detail menu at bottom
 rewind button use to rewind just dismiss card.
 On Favorite screen card is swipped to delete as well as undo (custom class for swiping and undo).
 Latest technologies MVVM with kotlin ,coroutines,Retrofit,livedata and Room is used in project.
-For any query reach out to me in shivanibajpai5@gmail.com
+For any query reach out to me in shivanivajpayee5@gmail.com
