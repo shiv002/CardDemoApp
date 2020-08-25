@@ -192,7 +192,7 @@ class CardActivity : AppCompatActivity(), CardStackListener, MenuItemClickListen
             stack_view.rewind()
         } else if (menuposition == 2) {
             if (mProfileList.size > 0) {
-                val mUserDetail: UserModel = mProfileList.get(0).user
+                val mUserDetail: UserModel = mProfileList.get(itemPosition).user
                 val intent = Intent(this@CardActivity, UserDetailActivity::class.java)
                 intent.putExtra("USERDETAIL", mUserDetail)
                 startActivity(intent)
