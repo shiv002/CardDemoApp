@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">CardDemoApp</string>
+    <string name="txt_add">My Address is</string>
+    <string name="txt_user_id">User Name:</string>
+    <string name="txt_fullname">Name:</string>
+    <string name="txt_gender">Gender:</string>
+    <string name="txt_email">Email:</string>
+    <string name="txt_address">Address:</string>
+    <string name="txt_phn">Phone Number:</string>
+    <string name="txt_SSN">SSN:</string>
+    <string name="txt_space"> </string>
+    <string name="txt_dash">/</string>
+    <string name="txt_userName">My UserName is</string>
+    <string name="txt_birthday">My Birthday at</string>
+    <string name="txt_password">My Password is</string>
+    <string name="txt_call">My Phone Number is</string>
+    <string name="txt_loc">My Location is</string>
+
+    <string name="txt_fav">Favorites</string>
+    <string name="txt_detail">Profile Detail</string>
+
+
+</resources>

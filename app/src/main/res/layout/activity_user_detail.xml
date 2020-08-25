@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data class="DetailBinding">
+
+        <variable
+            name="userdetail"
+            type="com.dance.carddemoapp.models.UserModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/txt_12dp"
+        android:background="@android:color/white">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imageView1"
+            android:layout_width="@dimen/txt_150dp"
+            android:layout_height="@dimen/txt_150dp"
+            android:layout_marginTop="@dimen/txt_30dp"
+            android:elevation="@dimen/txt_12dp"
+            android:scaleType="fitCenter"
+            android:src="@{userdetail.picture}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_border_color="#FFFFFF"
+            app:riv_border_width="@dimen/txt_2dp"
+            app:riv_corner_radius="@dimen/txt_30dp"
+            app:riv_mutate_background="true"
+            app:riv_oval="true"
+            app:riv_tile_mode="repeat" />
+
+        <TextView
+            android:id="@+id/txt_userId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/txt_12dp"
+            android:fontFamily="casual"
+            android:text="@{@string/txt_user_id.concat(userdetail.username)}"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/txt_18sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView1"
+            tools:text="abdeefefef" />
+
+        <TextView
+            android:id="@+id/txt_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/txt_12dp"
+            android:fontFamily="casual"
+            android:text="@{@string/txt_fullname.concat(userdetail.name.title).concat(@string/txt_space).concat(userdetail.name.firstString).concat(@string/txt_space).concat(userdetail.name.last)}"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/txt_18sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_userId"
+            tools:text="abdeefefef" />
+
+        <TextView
+            android:id="@+id/txt_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/txt_12dp"
+            android:fontFamily="casual"
+            android:text="@{@string/txt_address.concat(userdetail.location.street).concat(@string/txt_space).concat(userdetail.location.city)}"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/txt_18sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_gender"
+            tools:text="abdeefefef" />
+
+        <TextView
+            android:id="@+id/txt_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/txt_12dp"
+            android:fontFamily="casual"
+            android:text="@{@string/txt_gender.concat(userdetail.gender)}"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/txt_18sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_name"
+            tools:text="abdeefefef" />
+
+        <TextView
+            android:id="@+id/txt_ssn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/txt_12dp"
+            android:fontFamily="casual"
+            android:text="@{@string/txt_SSN.concat(userdetail.sSN)}"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/txt_18sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_address"
+            tools:text="abdeefefef" />
+
+        <TextView
+            android:id="@+id/txt_phn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/txt_12dp"
+            android:fontFamily="casual"
+            android:text="@{@string/txt_phn.concat(userdetail.phone).concat(@string/txt_dash).concat(userdetail.cell)}"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/txt_18sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_ssn"
+            tools:text="abdeefefef" />
+
+        <TextView
+            android:id="@+id/txt_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/txt_12dp"
+            android:fontFamily="casual"
+            android:text="@{@string/txt_email.concat(userdetail.email)}"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/txt_18sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_phn"
+            tools:text="abdeefefef" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

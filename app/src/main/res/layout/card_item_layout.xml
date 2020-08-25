@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data class="ItemBinding">
+
+        <variable
+            name="profile"
+            type="com.dance.carddemoapp.models.UserModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/txt_500dp"
+        android:elevation="@dimen/txt_12dp"
+        android:orientation="vertical"
+        app:cardCornerRadius="@dimen/txt_10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/txt_500dp"
+            android:background="@color/colorPrimary">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/txt_500dp"
+                android:layout_centerInParent="true">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.2" />
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="@dimen/txt_150dp"
+                    android:layout_height="@dimen/txt_150dp"
+                    android:elevation="@dimen/txt_12dp"
+                    android:scaleType="fitCenter"
+                    android:src="@{profile.picture}"
+                    app:layout_constraintBottom_toBottomOf="@id/guideline"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/guideline"
+                    app:riv_border_color="#FFFFFF"
+                    app:riv_border_width="@dimen/txt_2dp"
+                    app:riv_corner_radius="@dimen/txt_30dp"
+                    app:riv_mutate_background="true"
+                    app:riv_oval="true"
+                    app:riv_tile_mode="repeat" />
+
+                <LinearLayout
+                    android:id="@+id/lin_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="@android:color/white"
+                    android:orientation="vertical"
+                    app:layout_constraintDimensionRatio="1:.86"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/guideline">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/main_constraint"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/txt_130dp">
+
+                        <TextView
+                            android:id="@+id/txt_add"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="casual"
+                            android:text="@string/txt_userName"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="@dimen/txt_18sp"
+                           app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txt_add_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:text="@{profile.username}"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/txt_24sdp"
+                            android:textStyle="bold"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txt_add"
+                            tools:text="5 Miles Away" />
+
+                        <LinearLayout
+                            android:id="@+id/detail_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/txt_14dp"
+                           android:layout_marginRight="@dimen/txt_14dp"
+                            android:orientation="horizontal"
+                            android:weightSum="5"
+                            android:layout_marginTop="@dimen/txt_50dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txt_add_value">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/user_name"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/txt_30dp"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:tint="@color/colorPrimary"
+                                app:srcCompat="@drawable/ic_globe" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/call"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/txt_30dp"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:tint="@android:color/darker_gray"
+                                app:srcCompat="@drawable/ic_call" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/location"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/txt_30dp"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:tint="@android:color/darker_gray"
+                                app:srcCompat="@drawable/ic_location" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/calendar"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/txt_30dp"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:tint="@android:color/darker_gray"
+                                app:srcCompat="@drawable/ic_calen" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/password"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/txt_30dp"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:tint="@android:color/darker_gray"
+                                app:srcCompat="@drawable/ic_lock">
+
+                            </androidx.appcompat.widget.AppCompatImageView>
+                        </LinearLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lin_rewind"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/txt_10dp"
+                    android:layout_marginRight="@dimen/txt_10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lin_detail">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_fav"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/txt_40dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/ic_star" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_rewind"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/txt_40dp"
+                        android:layout_weight="1"
+                         app:srcCompat="@drawable/ic_rewind" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_detail"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/txt_40dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/ic_info" />
+
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</layout>
